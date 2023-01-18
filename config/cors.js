@@ -1,4 +1,8 @@
-const whitelist = [process.env.CLIENT_URL, process.env.LOCAL_CLIENT];
+const whitelist = [
+  process.env.CLIENT_URL_1,
+  process.env.CLIENT_URL_2,
+  process.env.LOCAL_CLIENT_URL,
+];
 
 module.exports = {
   origin: function (origin, callback) {

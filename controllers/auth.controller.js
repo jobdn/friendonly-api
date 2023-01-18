@@ -26,7 +26,7 @@ class AuthController {
     try {
       const { link } = req.params;
       await authService.activateUserBy(link);
-      res.redirect(302, `${process.env.CLIENT_URL}/login`);
+      res.redirect(302, `${process.env.LOCAL_CLIENT_1}/login`);
     } catch (error) {
       next(error);
     }
