@@ -14,7 +14,7 @@ class AuthController {
       res.cookie("refreshToken", userData.refreshToken, {
         maxAge: TEN_DAYS,
         httpOnly: true,
-        sameSite: "none",
+        sameSite: "strict",
         secure: true,
       });
 
@@ -44,7 +44,7 @@ class AuthController {
       res.cookie("refreshToken", userData.refreshToken, {
         maxAge: TEN_DAYS,
         httpOnly: true,
-        sameSite: "none",
+        sameSite: "strict",
         secure: true,
       });
 
@@ -69,10 +69,9 @@ class AuthController {
       const userData = await authService.refresh(refreshToken);
 
       res.cookie("refreshToken", userData.refreshToken, {
-        // TODO: check why ten days?
         maxAge: TEN_DAYS,
         httpOnly: true,
-        sameSite: "none",
+        sameSite: "strict",
         secure: true,
       });
 

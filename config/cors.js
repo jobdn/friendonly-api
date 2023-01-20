@@ -6,7 +6,7 @@ const whitelist = [
 
 module.exports = {
   origin: function (origin, callback) {
-    console.log(origin);
+    console.log("origin sended request: ", origin);
     if (whitelist.indexOf(origin) !== -1) {
       callback(null, true);
     } else {
